@@ -75,6 +75,13 @@ public class LoginTest {
 		driver.findElement(By.xpath("//div[@class='content']/form/div/div[1]/input")).sendKeys("yadneshshah91@gmail.com");
 		driver.findElement(By.xpath("//div[@class='content']/form/div/div[2]/input")).sendKeys("test123");
 		driver.findElement(By.xpath("//*[@class='ui small fluid blue button uppercase reset_button']")).click();
+		
+		
 	}
 	
+	public static void doBooking() throws Exception
+	{
+		driver.findElement(By.xpath("//div[@class='header item b2bheaderlogo']")).click();
+		Thread.sleep(3000);
+	}
 }
