@@ -16,9 +16,11 @@ public class LoginTest {
 	public static void main(String[] args) throws Exception 
 	{		
 		openUrl("Chrome");
-		//signUp();
 		doLogin();
-		//driver.quit();
+//		signUp();
+//		driver.quit();
+//		Thread.sleep(3000);
+//		doLogout();
 	}
 	
 	public static void openUrl(String browser)
@@ -60,7 +62,7 @@ public class LoginTest {
 		driver.findElement(By.xpath("//div[@class='ui basic segment inside_form']/div[1]/input")).sendKeys("yadneshshah71@gmail.com");
 		driver.findElement(By.xpath("//div[@class='ui basic segment inside_form']/div[2]/input")).sendKeys("8668673200");
 		driver.findElement(By.xpath("//div[@class='ui basic segment inside_form']/div[3]/input")).sendKeys("Yadnesh");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@class='ui basic segment inside_form']/div[4]/input")).sendKeys("test123");
 		driver.findElement(By.xpath("//div[@class='ui basic segment inside_form']/div[5]/input")).sendKeys("test123");
 		
@@ -75,8 +77,13 @@ public class LoginTest {
 		driver.findElement(By.xpath("//div[@class='content']/form/div/div[1]/input")).sendKeys("yadneshshah91@gmail.com");
 		driver.findElement(By.xpath("//div[@class='content']/form/div/div[2]/input")).sendKeys("test123");
 		driver.findElement(By.xpath("//*[@class='ui small fluid blue button uppercase reset_button']")).click();
-		
-		
+		System.out.println("Login Successful");
+	}
+	
+	public static void doLogout()
+	{
+		driver.findElement(By.xpath("//div[@class='manage']/a[2]")).click();
+		System.out.println("Logout Successful");
 	}
 	
 	public static void doBooking() throws Exception
